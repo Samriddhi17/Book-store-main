@@ -1,0 +1,175 @@
+<html>
+
+<head>
+	<title>Register</title>
+	<script>
+		function validate() {
+			var n = document.getElementById("Fname");
+			var p = document.getElementById("Lname");
+			var r = document.getElementById("Email");
+			var s = document.getElementById("Number");
+			var u = document.getElementById("user");
+			var v = document.getElementById("pass");
+
+			var patt_Fname = /(^[A-Za-z]+\s[A-Za-z]+$)/;
+			var patt_Lname = /(^[A-Za-z]+\s[A-Za-z]+$)/;
+			var patt_Email = /^([A-za-z0-9\.-]+)@([A-za-z0-9-]+).([a-z]{2,3})$/;
+			var patt_Number = /^[7-9][0-9]{9}/;
+			var patt_user = /(^[A-Za-z]+\s[A-Za-z]+$)/;
+			var patt_pass = /^[A-Za-z]+/;
+
+			if (n.value == "") {
+				alert("Pls enter the First name ");
+				return false;
+			}
+			else {
+
+				if (p.value == "") {
+					alert("Pls enter the Last name ");
+					return false;
+				}
+
+				else {
+					if (r.value == "") {
+						alert(" Email Id Not entered");
+						return false;
+					}
+
+					else {
+
+						if (s.value == "") {
+							alert(" Email Id Not entered");
+							return false;
+
+						}
+
+						else {
+							if (u.value == "") {
+								alert(" User name not entered");
+								return false;
+							}
+							else {
+								if (v.value == "") {
+									alert("Password not entered");
+									return false;
+								}
+								else {
+
+									if (patt_Fname.test(n.value)) {
+										if (patt_Lname.test(p.value)) {
+											if (patt_Email.test(r.value)) {
+												if (patt_Number.test(s.value)) {
+													if (patt_user.test(u.value)) {
+														if (patt_pass.test(v.value)) {
+															alert("Data Submited");
+															return true;
+														}
+														else {
+															alert("password is incorrect");
+															return false;
+														}
+													}
+													else {
+														alert("user name  is incorrect");
+														return false;
+													}
+
+												}
+												else {
+													alert("mobile number is incorrect ");
+													return false;
+												}
+
+											}
+											else {
+												alert("Email is incorrect ");
+												return false;
+											}
+
+										}
+										else {
+											alert("last name  is incorrect ");
+											return false;
+										}
+
+									}
+									else {
+										alert("first name is incorrect");
+										return false;
+									}
+
+								}
+
+							}
+
+
+						}
+
+
+					}
+				}
+
+			}
+
+
+		}
+
+		function myFunction() {
+
+			if (validate() == "")
+				alert("\n\n Your reference id is CI-564782");
+		}
+
+	</script>
+</head>
+
+<body>
+	<img src="instagram-hex-colors-gradient-background.png" width="100%" height="auto">
+	<div style="position : absolute; top : 10% ; bottom : 20% ; left : 20%">
+		<img src="white.jpg" width="470" height="700" class="div">
+		<div style="position : absolute; top : 5% ; bottom : 2% ; left : 5%">
+			REGISTRATION FORM<br><br>
+			<form name="form1" onsubmit="return validate()">
+				FIRST NAME : <input type="text" name="Fname" id="Fname"><br><br>
+				LAST NAME : <input type="text" name="Lname" id="Lname"><br><br>
+				DOB &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : <input type="date"
+					name="dob" id="dob"><br><br>
+				GENDER : <br><br>
+				<input type="radio" name="Gender">Male &nbsp;
+				<input type="radio" name="Gender">Female &nbsp;
+				<input type="radio" name="Gender">trans &nbsp; <br><br>
+				E-MAIL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : <input type="text" name="Email"
+					id="Email"><BR><BR>
+				PHONE NUMBER : <input type="text" name="Number" id="Number" max="10"><br>
+				COUNTRY : <select type="browse" name="country" id="country">
+					<option>India</option>
+					<option>America</option>
+					<option>Africa</option>
+					<option>China</option>
+					<option>Japan</option>
+					<option>Russia</option>
+					<option>Indonesia</option>
+					<option>Austilia</option>
+				</select><br><br>
+				ADDRESS : <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <textarea cols="30"
+					rows="4" name="commrnts">
+ </textarea><br><br>
+				USER NAME : <input type="text" name="user" id="user"><br><br>
+				PASSWORD : <input type="password" name="pass" id="pass"><br><br>
+				CONFIRM PASSWORD : <input type="password" name="dean" id="dean"><br><br>
+
+				<input type="submit" Value="Generate Customer id" onclick="myFunction()">
+				&nbsp;&nbsp;
+				<input type="submit" Value="SUBMIT">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<button><a href="index.html">Home Page</a></button>
+
+
+
+			</form>
+		</div>
+		<div>
+
+</body>
+
+</html>
